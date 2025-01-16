@@ -9,6 +9,7 @@ class User(Base):
     username = Column(String)
     firstname = Column(String)
     lastname = Column(String)
+    age = Column(Integer)
     slug = Column(String, unique=True, index=True)
     tasks = relationship('Task', back_populates='user')
 
